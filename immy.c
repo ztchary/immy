@@ -44,8 +44,6 @@ int main(int argc, char **argv) {
 	SDL_GetTextureSize(textures[0], &w, &h);
 	SDL_SetWindowSize(window, (int)w, (int)h);
 
-	SDL_FRect dst_rect = { 0.0f, 0.0f, w, h };
-
 	bool running = true;
 	Uint64 last_time = SDL_GetTicks();
 
@@ -73,11 +71,7 @@ int main(int argc, char **argv) {
 
 		SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
 		SDL_RenderClear(renderer);
-		int x, y;
-		SDL_GetWindowSizeInPixels(window, &x, &y);
-		dst_rect.w = (float)x;
-		dst_rect.h = (float)y;
-		SDL_RenderTexture(renderer, textures[frame], NULL, &dst_rect);
+		SDL_RenderTexture(renderer, textures[frame], NULL, NULL);
 		SDL_RenderPresent(renderer);
 	}
 
