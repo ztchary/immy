@@ -10,4 +10,5 @@ immy: immy.c
 
 install:
 	install -m 755 immy /usr/bin
+	install -m 755 immy.desktop /usr/share/applications
 

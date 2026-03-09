@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=immy
+Comment=tuff image viewer for hyprland
+Exec=immy %F
+Icon=image-viewer
+Terminal=false
+Categories=Graphics;Viewer;RasterGraphics;
+StartupNotify=true
+MimeType=image/png;image/jpeg;image/jpg;image/gif;image/bmp;image/tiff;image/x-tga;image/webp;image/avif;image/x-portable-pixmap;image/x-portable-bitmap;image/x-portable-graymap;image/x-qoi;
+
